@@ -12,7 +12,7 @@ cd Ticker-App/
 npm install
 expo start
 ```
-To continue, Scan the QR code shown with Expo Go (Android) or the Camera app (iOS).
+To continue, Scan the QR code shown in terminal/command line with Expo Go (Android) or the Camera app (iOS).
 
-![IMG_7951](https://user-images.githubusercontent.com/65294826/214092677-15aee245-0639-4f21-bf09-bd2abb2cd7f6.png)
+![IMG_7951](https://user-images.githubusercontent.com/65294826/214092677-15aee245-0639-4f21-bf09-bd2abb2cd7f6.png = 250x250)
 
