@@ -7,3 +7,10 @@ A React Native app built using TypeScript, it uses the useState and useEffect ho
 # Running the App
 After making sure Expo Go is downloaded on a device and after cloning the repository, run the following commands:
 
+```bash
+cd Ticker-App/
+npm install
+expo start
+```
+To continue, Scan the QR code shown with Expo Go (Android) or the Camera app (iOS)
+
