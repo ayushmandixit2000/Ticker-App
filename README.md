@@ -14,4 +14,4 @@ expo start
 ```
 To continue, Scan the QR code shown with Expo Go (Android) or the Camera app (iOS).
 
-<img src="[https://github.com/favicon.ico](https://user-images.githubusercontent.com/65294826/214091290-ecfaec05-38c1-43a2-a85f-549e6d4f8fa5.png)" width="48">
+<img src="[https://lh3.googleusercontent.com/pw/AMWts8D1L-8Xf5gSxWmuHih_2zhYe-t5tR8ufJF_ELIM9W8xzPjGJRKydt1KLIa0jEgGPHIg3D3jg9ihiucuLJTzDe8NM2cmRYS3beiPMbDwMiGNSGJVN_pdTf0_VO4FgVsEwmqiVRgGNnn3O4x85EAzLgz6Pw=w730-h1580-no?authuser=0)" width="48">
