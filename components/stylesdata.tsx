@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     width: 100
   },
   bottomlayer:{
-    flexDirection: "row"
+    flexDirection: "row",
+    width: 150
   },
   icon:{
     flexDirection: "row", marginTop: 8

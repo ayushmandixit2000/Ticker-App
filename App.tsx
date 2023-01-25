@@ -4,6 +4,8 @@ import axios from "axios";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import styles from "./components/stylesdata";
 
+
+// Stock interface defines the shape of the stock data returned from the API
 interface Stock {
   symbol: string;
   companyName: string;
@@ -13,22 +15,29 @@ interface Stock {
 }
 
 const App = () => {
+  // useState hook to store the stock data
   const [stockData, setStockData] = useState<Array<Stock>>([]);
 
-  const symbols = ["AAPL", "NFLX", "GOOGL", "AMZN", "TSLA"];
+  // An array of stock symbols to fetch data for
+  const symbols = ["AAPL", "NFLX", "GOOG", "AMZN", "TSLA"];
 
-  const [error, setError] = useState<Error | null>(null);
+  // useState hook to store any errors that occur during data fetching
+  const [error, setError] = useState<Error | null>(null); 
 
+  // useEffect hook to fetch stock data when the component mounts
   useEffect(() => {
     const fetchStockData = async () => {
       try {
+        // map() to create an array of promises, each representing a request to the API
         const promises = symbols.map(async (symbol) => {
           const response = await axios.get(
             `https://cloud.iexapis.com/stable/stock/${symbol}/quote?token=pk_c70c2ce7986146cc992a2282d57ae6c0`
           );
           return response.data;
         });
+        // Use Promise.all() to wait for all promises to resolve
         const data = await Promise.all(promises);
+        // Update the state with the fetched data
         setStockData(data);
       } catch (err) {
         const error = new Error((err as any).message);
@@ -38,17 +47,21 @@ const App = () => {
     fetchStockData();
   }, []);
 
+  // If there is an error, display the error message
   if (error) {
     return <Text>An error occurred: {error.message}</Text>;
   }
 
+  // If stock data is still loading, display a loading message
   if (!stockData) {
     return <Text>Loading...</Text>;
   }
 
+  // Main View container for the entire list of stocks
+  // CSS styling details in components/stylesdata.tsx
   return (
     <View style={styles.main}>
-      <View>
+      <View> 
         {stockData.map((stock, index) => (
           <View key={index}>
             <View style={styles.stockscreen}>
@@ -64,7 +77,7 @@ const App = () => {
               <View style={styles.column_data1}>
                 <Text style={styles.symbol}>{stock.symbol}</Text>
                 <Text style={styles.company}>
-                  {stock.companyName.substring(0, 15) + "..."}
+                  {stock.companyName.substring(0, 18) + "..."}
                 </Text>
               </View>
               <View style={styles.rightcomp}>
@@ -97,9 +110,7 @@ const App = () => {
                   </Text>
                   <Text
                     style={
-                      stock.changePercent >= 0
-                        ? styles.upchangep
-                        : styles.downchangep
+                      stock.changePercent >= 0 ? styles.upchangep : styles.downchangep
                     }
                   >
                     {stock.changePercent >= 0 ? "+" : "-"}{" "}
