@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "column",
+    flexDirection: "row",
     width: 390,
   },
   logo_outer:{
@@ -98,18 +98,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#F4F4F4",
     height: 2, 
     width: 340
-  },
-  scrollView: {
-    backgroundColor: 'white',
-    marginHorizontal: 22,
-  },
-  textStyle1: {
-    color: "#6a4fc2",
-    fontWeight: "500",
-    textAlign: "center",
-    fontSize: 20,
-    marginTop: 60,
-    marginBottom: 20,
   }
 
 })
