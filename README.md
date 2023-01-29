@@ -10,7 +10,7 @@ After making sure Expo Go is downloaded on a device and after cloning the reposi
 ```bash
 cd Ticker-App/
 npm install
-expo start
+npm start
 ```
 To continue, Scan the QR code shown in terminal/command line with Expo Go (Android) or the Camera app (iOS). Alternatively, key in w, i or a to open in web, ios simulator or android respecitvely.
 
